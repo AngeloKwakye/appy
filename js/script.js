@@ -40,5 +40,8 @@ function isEligible () {
 
 //function - Invoking
 // alert(isEligible()); 
-isEligible();
+console.log(isEligible());
+document.body.innerHTML = isEligible();
+
+console.log('we are using GIT');
 
