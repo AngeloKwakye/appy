@@ -41,7 +41,26 @@ function isEligible () {
 //function - Invoking
 // alert(isEligible()); 
 console.log(isEligible());
-document.body.innerHTML = isEligible();
+// document.body.innerHTML = isEligible();
 
 console.log('we are using GIT');
 
+let listItems = document.getElementsByTagName("li");
+console.log(listItems);
+
+
+for (let i = 0; i < 9; i++){
+    let listItem = listItems[i];
+    listItem.onmouseover = function(event){
+        // console.log(event)
+        listItem.innerHTML = listItem.innerHTML.toUpperCase();
+        listItem.style.textDecoration = 'underline';
+        listItem.style.cursor = 'pointer';
+    }
+
+    listItem.onmouseout = function(){
+        listItem.innerHTML = listItem.innerHTML.toLowerCase();
+        listItem.style.textDecoration = 'none';
+        listItem.style.cursor = 'none';
+    }
+}
